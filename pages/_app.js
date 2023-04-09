@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
-import { ThemeProvider } from '@mui/styles'
+import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import theme from '../src/theme'
 
@@ -12,7 +12,7 @@ export default function MyApp(props) {
     <React.Fragment>
       <Head>
         <title>Anunx</title>
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width"></meta>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -24,5 +24,5 @@ export default function MyApp(props) {
 
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
-  page: PropTypes.object.isRequired,
+  pageProps: PropTypes.object.isRequired,
 }
