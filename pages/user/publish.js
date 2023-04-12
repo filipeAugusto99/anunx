@@ -6,7 +6,11 @@ import {
   Select,
   TextField,
   Typography,
-  IconButton 
+  IconButton, 
+  FormControl,
+  InputLabel,
+  OutlinedInput,
+  InputAdornment,
   } from '@mui/material'
 
 import { useDropzone } from 'react-dropzone'
@@ -217,6 +221,23 @@ const Publish = () => {
             variant="outlined"
             fullWidth
           />
+        </Box>
+      </Container>
+
+      <Container maxWidth="md" className={classes.boxContainer}>
+        <Box className={classes.box}>
+          <Typography component="h6" variant="h6" color="textPrimary">
+            Preço
+          </Typography>
+          <br />
+          <FormControl fullWidth sx={{ m: 1 }}>
+          <InputLabel htmlFor="outlined-adornment-amount">Valor</InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-amount"
+            startAdornment={<InputAdornment position="start">R$</InputAdornment>}
+            label="Amount"
+          />
+        </FormControl>
         </Box>
       </Container>
 
